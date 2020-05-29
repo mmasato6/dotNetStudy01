@@ -10,3 +10,6 @@
 /BmiSample/BmiSample.Domain/obj
 /BmiSample/BmiSample.DomainTest/bin/Debug/netcoreapp2.1
 /BmiSample/BmiSample.DomainTest/obj
+/BmiSample/.vs/config
+/BmiSample/BmiSample.Mvc/bin/Debug/netcoreapp2.1
+/BmiSample/BmiSample.Mvc/obj
