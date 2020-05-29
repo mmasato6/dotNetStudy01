@@ -7,8 +7,10 @@ namespace BmiSample.Domain
         public double Calculate(int heightCm,int weightKg)
         {
             if (heightCm <= 0) throw new ArgumentOutOfRangeException(nameof(heightCm),heightCm,"1以上を入力してください。");
-            const int CentimeterPerMeter = 100;
-            double heightM = heightCm / CentimeterPerMeter;
+            //int同士の除算は戻り値がintになって小数点以下が切り捨てられてしまうのでdoubleにしてから計算する
+            double dblHeightCm = (double)heightCm;
+            const double CentimeterPerMeter = 100.0;
+            double heightM = dblHeightCm / CentimeterPerMeter;
 
             if (weightKg <= 0) throw new ArgumentOutOfRangeException(nameof(weightKg), weightKg, "1以上を入力してください。");
 

@@ -14,6 +14,7 @@ namespace BmiSample.DomainTest
             // Arrange
             var testData = new List<(int heightCm, int weightKg, double expectedResult)>();
             testData.Add((100, 1, 1.0));
+            testData.Add((150, 45, 20.0));
             testData.Add((200,100,25.0));
             var target = new BmiCalculator();
 
