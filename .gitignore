@@ -4,3 +4,5 @@
 
 /BmiSample/.vs/BmiSample/v15
 /BmiSample/BmiSample.Console/obj
+/BmiSample/BmiSample.Console/bin/Debug/netcoreapp2.1
+/BmiSample/.vs/BmiSample/DesignTimeBuild
