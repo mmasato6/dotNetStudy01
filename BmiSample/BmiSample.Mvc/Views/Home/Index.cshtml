@@ -1,8 +1,34 @@
-﻿@{
+﻿@model BmiSample.Mvc.Models.IndexViewModel
+
+@{
     ViewData["Title"] = "BMI計算";
 }
 
-<div>
-    身長<input type="number" />cm <br />
-    体重<input type="number" />kg <br/>
+<h2>Index</h2>
+
+<h4>BMI計算</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Calculate" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HeightCm" class="control-label"></label>
+                <input asp-for="HeightCm" class="form-control" />
+                <span asp-validation-for="HeightCm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeightKg" class="control-label"></label>
+                <input asp-for="WeightKg" class="form-control" />
+                <span asp-validation-for="WeightKg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="計算" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

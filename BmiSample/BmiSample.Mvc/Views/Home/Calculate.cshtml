@@ -1,0 +1,36 @@
+﻿@model BmiSample.Mvc.Models.CalculatorViewModel
+
+@{
+    ViewData["Title"] = "Calculate";
+}
+
+<h2>Calculate</h2>
+
+<div>
+    <h4>CalculatorViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HeightCm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HeightCm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WeightKg)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WeightKg)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BmiIndex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BmiIndex)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
