@@ -17,7 +17,7 @@ namespace BmiSample.Mvc.Controllers
         }
         public IActionResult Calculate(int? heightCm, int? weightKg)
         {
-            //入力チェック
+            //入力チェック(intとして無効な引数が渡された場合もnullになる)
             if (!heightCm.HasValue)
             {
                 return RedirectToAction("Index");
