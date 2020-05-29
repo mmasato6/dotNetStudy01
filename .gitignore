@@ -6,3 +6,7 @@
 /BmiSample/BmiSample.Console/obj
 /BmiSample/BmiSample.Console/bin/Debug/netcoreapp2.1
 /BmiSample/.vs/BmiSample/DesignTimeBuild
+/BmiSample/BmiSample.Domain/bin/Debug/netcoreapp2.1
+/BmiSample/BmiSample.Domain/obj
+/BmiSample/BmiSample.DomainTest/bin/Debug/netcoreapp2.1
+/BmiSample/BmiSample.DomainTest/obj
