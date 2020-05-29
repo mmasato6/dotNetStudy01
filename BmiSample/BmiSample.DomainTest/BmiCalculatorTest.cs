@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using BmiSample.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -28,8 +29,25 @@ namespace BmiSample.DomainTest
         [TestMethod]
         public void CalculateExceptionTest()
         {
-            var target = new BmiCalculator
-            // 0は受け付けない
+            var target = new BmiCalculator();
+            // 身長
+            // 0はダメ
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => target.Calculate(0, 1), "height 0");
+            // マイナスもダメ
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => target.Calculate(-1, 1), "height -1");
+            // 1～はOK
+            var h1 = target.Calculate(1, 1);
+            var h2 = target.Calculate(160, 1);
+            var h3 = target.Calculate(999, 1);
+            //体重
+            //0はダメ
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => target.Calculate(1, 0), "weight 0");
+            // マイナスもダメ
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => target.Calculate(1, -1), "weight -1");
+            // 1～はOK
+            var w1 = target.Calculate(1, 1);
+            var w2 = target.Calculate(1, 50);
+            var w3 = target.Calculate(1, 100);
 
         }
 
