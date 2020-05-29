@@ -17,6 +17,15 @@ namespace BmiSample.Mvc.Controllers
         }
         public IActionResult Calculate(int? heightCm, int? weightKg)
         {
+            //入力チェック
+            if (!heightCm.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+            if (!weightKg.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
             BmiCalculator calculator = new BmiCalculator();
             double result = calculator.Calculate(heightCm.Value, weightKg.Value);
             var vm = new CalculatorViewModel() { HeightCm = heightCm.Value, WeightKg = weightKg.Value, BmiIndex = result };
