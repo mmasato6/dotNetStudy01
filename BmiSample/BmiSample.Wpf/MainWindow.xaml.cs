@@ -23,6 +23,8 @@ namespace BmiSample.Wpf
         public MainWindow()
         {
             InitializeComponent();
+            var vm = new MainWindowViewModel();
+            DataContext = vm;
         }
     }
 }

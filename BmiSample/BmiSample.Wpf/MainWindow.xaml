@@ -8,10 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TextBlock>身長(cm)</TextBlock>
-        <TextBox></TextBox>
+        <TextBox  Text="{Binding HeightCm}"/>
         <TextBlock>体重(kg)</TextBlock>
-        <TextBox></TextBox>
+        <TextBox Text="{Binding WeightKg}"></TextBox>
         <TextBlock>BMI指数</TextBlock>
-        <TextBlock></TextBlock>
+        <TextBlock Text="{Binding BmiIndex}"></TextBlock>
     </StackPanel>
 </Window>
