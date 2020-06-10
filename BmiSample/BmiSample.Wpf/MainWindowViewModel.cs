@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 using BmiSample.Domain;
 
 namespace BmiSample.Wpf
 {
-    class MainWindowViewModel : INotifyPropertyChanged
+    internal class MainWindowViewModel : INotifyPropertyChanged
     {
         #region "Interface Implementaiton"
         public event PropertyChangedEventHandler PropertyChanged;
@@ -15,8 +12,8 @@ namespace BmiSample.Wpf
         private int? _heightCm;
         public int? HeightCm
         {
-            get { return _heightCm; }
-            set 
+            get => _heightCm;
+            set
             {
                 _heightCm = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(HeightCm)));
@@ -24,41 +21,41 @@ namespace BmiSample.Wpf
             }
         }
         private int? _weightKg;
-        public int? WeightKg 
-        { 
-            get { return _weightKg; } 
-            set 
-            { 
+        public int? WeightKg
+        {
+            get => _weightKg;
+            set
+            {
                 _weightKg = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(WeightKg)));
                 CalculateBmi();
-            } 
+            }
         }
 
-        private double? _bmiIndex;
-        public double? BmiIndex 
-        { 
-            get {return _bmiIndex; } 
-            private set 
-            { 
+        private double? _bmiIndex = 0.0;
+        public double? BmiIndex
+        {
+            get => _bmiIndex;
+            private set
+            {
                 _bmiIndex = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(BmiIndex)));
-            } 
-        } 
+            }
+        }
 
-        private void CalculateBmi() 
+        private void CalculateBmi()
         {
             if (!HeightCm.HasValue || HeightCm.Value <= 0) 
             {
                 BmiIndex = 0.0;
                 return;
-            };
+            }
             if (!WeightKg.HasValue || WeightKg.Value <= 0) 
             {
                 BmiIndex = 0.0;
                 return;
             }
-            var calculator = new BmiCalculator();
+            BmiCalculator calculator = new BmiCalculator();
             BmiIndex = calculator.Calculate(HeightCm.Value, WeightKg.Value);
         }
     }
