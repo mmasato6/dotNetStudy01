@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BmiSample.Domain\BmiSample.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
