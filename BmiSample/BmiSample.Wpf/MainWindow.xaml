@@ -6,11 +6,27 @@
         xmlns:local="clr-namespace:BmiSample.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ControlTemplate x:Key="ErrorTemplate">
+            <StackPanel>
+                <Border BorderBrush="Red" BorderThickness="1" Width="{Binding ElementName=adornedElement,Path=ActualWidth}" Height="{Binding ElementName=adornedElement,Path=ActualHeight}">
+                    <AdornedElementPlaceholder Name="adornedElement"></AdornedElementPlaceholder>
+                </Border>
+                <ItemsControl ItemsSource="{Binding ElementName=adornedElement, Path=AdornedElement.(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" Foreground="Red"></TextBlock>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ControlTemplate>
+    </Window.Resources>
     <StackPanel>
         <TextBlock>身長(cm)</TextBlock>
-        <TextBox  Text="{Binding HeightCm}"/>
+        <TextBox  Text="{Binding HeightCm}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}"/>
         <TextBlock>体重(kg)</TextBlock>
-        <TextBox Text="{Binding WeightKg}"></TextBox>
+        <TextBox Text="{Binding WeightKg}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}"></TextBox>
         <TextBlock>BMI指数</TextBlock>
         <TextBlock Text="{Binding BmiIndex}"></TextBlock>
     </StackPanel>
