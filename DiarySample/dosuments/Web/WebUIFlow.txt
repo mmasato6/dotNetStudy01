@@ -1,0 +1,37 @@
+[Diaries]
+日記一覧
+---
+新規作成
+==> Diaries/Create
+詳細
+==> Diaries/(id)/Detail
+
+[Diaries/Create]
+日付
+タイトル
+内容
+---
+保存
+==> Diaries
+
+[Diaries/(id)/Detail]
+日付
+タイトル
+内容
+作成日
+更新日
+---
+編集
+==> Diaries/(id)/Edit
+削除
+==> Diaries
+
+[Diaries/(id)/Edit]
+日付
+タイトル
+内容
+作成日
+更新日
+---
+保存
+==> Diaries
