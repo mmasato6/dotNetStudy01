@@ -20,3 +20,7 @@
 /BmiSample/BmiSample.Mvc/bin/Debug/netcoreapp3.1
 /BmiSample/BmiSample.Wpf/bin/Debug/netcoreapp3.1
 /BmiSample/BmiSample.Wpf/obj
+/.vs
+/DiarySample/.vs/DiarySample
+/DiarySample/DiarySample.Mvc/bin/Debug/netcoreapp3.1
+/DiarySample/DiarySample.Mvc/obj
