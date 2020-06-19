@@ -4,7 +4,7 @@
 新規作成
 ==> Diaries/Create
 詳細
-==> Diaries/(id)/Detail
+==> Diaries/Detail
 
 [Diaries/Create]
 日付
@@ -14,7 +14,7 @@
 保存
 ==> Diaries
 
-[Diaries/(id)/Detail]
+[Diaries/Detail]
 日付
 タイトル
 内容
@@ -22,11 +22,11 @@
 更新日
 ---
 編集
-==> Diaries/(id)/Edit
+==> Diaries/Edit
 削除
 ==> Diaries
 
-[Diaries/(id)/Edit]
+[Diaries/Edit]
 日付
 タイトル
 内容
