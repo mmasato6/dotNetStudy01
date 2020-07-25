@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarySample.Mvc", "DiarySample.Mvc\DiarySample.Mvc.csproj", "{75C474CA-507B-4071-9A98-498DDA7CEE60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiarySample.Mvc", "DiarySample.Mvc\DiarySample.Mvc.csproj", "{75C474CA-507B-4071-9A98-498DDA7CEE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarySample.Dao", "DiarySample.Dao\DiarySample.Dao.csproj", "{1B81CCC1-4830-4724-8147-1B411E29D9CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{75C474CA-507B-4071-9A98-498DDA7CEE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C474CA-507B-4071-9A98-498DDA7CEE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C474CA-507B-4071-9A98-498DDA7CEE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B81CCC1-4830-4724-8147-1B411E29D9CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B81CCC1-4830-4724-8147-1B411E29D9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B81CCC1-4830-4724-8147-1B411E29D9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B81CCC1-4830-4724-8147-1B411E29D9CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
