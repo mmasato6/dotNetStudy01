@@ -11,3 +11,11 @@ class Diary{
 }
 
 ```
+
+
+```
+DiaryDample
+├─DiarySample.Mvc
+├─DiarySample.Wpf
+└─DiarySample.Dao
+```
