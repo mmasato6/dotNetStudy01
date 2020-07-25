@@ -2,7 +2,7 @@
 
 namespace DiarySample.Dao
 {
-    class DiarySampleDbContext : DbContext
+    public class DiarySampleDbContext : DbContext
     {
         public DiarySampleDbContext(DbContextOptions<DiarySampleDbContext> options) : base(options) { }
         public DbSet<Diary> Diaries { get; set; }
