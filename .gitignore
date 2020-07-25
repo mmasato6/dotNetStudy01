@@ -26,3 +26,4 @@
 /DiarySample/DiarySample.Mvc/obj
 /DiarySample/DiarySample.Dao/obj
 /DiarySample/DiarySample.Dao/bin/Debug/netstandard2.0
+/DiarySample/DiarySample.Mvc/DiaryWeb.db
