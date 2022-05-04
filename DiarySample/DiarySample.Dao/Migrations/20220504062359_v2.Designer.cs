@@ -3,14 +3,16 @@ using System;
 using DiarySample.Dao;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DiarySample.Dao.Migrations
 {
     [DbContext(typeof(DiarySampleDbContext))]
-    partial class DiarySampleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220504062359_v2")]
+    partial class v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
